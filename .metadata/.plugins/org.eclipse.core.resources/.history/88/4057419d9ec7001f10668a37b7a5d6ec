@@ -1,0 +1,32 @@
+package com.promineotech;
+
+public class TestDemo {
+
+	
+	public int addPositive(int a, int b) {
+		if( a > 0 && b > 0) {
+			if(a<=0||b<=0) {
+				throw new IllegalArgumentException("Both parameters must be positive!");
+			}
+			
+		}return a+b;
+		
+	}
+	
+    public int multiplyPositive(int a, int b) {
+        if (a == 0 || b == 0) {
+            throw new IllegalArgumentException("Neither number can be zero");
+        }
+        return a * b;
+    }
+	
+    public int randomNumberSquared() {
+        int randomInt = getRandomInt();
+        return randomInt * randomInt;
+    }
+
+    public int getRandomInt() {
+        return (int) (Math.random() * 100); 
+    }
+    
+}
